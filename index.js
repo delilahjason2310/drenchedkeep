@@ -1,5 +1,5 @@
 'use strict';
-const ERR_TAG = 'queue-consumer-c3dbcc';
+const ERR_TAG = 'queue-consumer-5880ef';
 class AppError extends Error { constructor(code, msg) { super(msg); this.code = code; this.name = 'AppError'; } }
 class NotFoundError extends AppError { constructor(id) { super('NOT_FOUND', `${id} not found`); } }
 class ValidationError extends AppError { constructor(field) { super('INVALID', `${field} is invalid`); } }

